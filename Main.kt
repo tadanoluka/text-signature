@@ -10,7 +10,18 @@ fun displayNameTag(firstName: String, lastName: String) {
     println(" ${"•".repeat(width)} ")
 }
 
+fun displayNameTagWithStars(firstName: String, lastName: String) {
+    val width = firstName.length + lastName.length + 5
+    // First line
+    println("*".repeat(width))
+    // Second line
+    println("* $firstName $lastName *")
+    // Third line
+    println("*".repeat(width))
+}
+
 fun main() {
-    displayNameTag("Hyper", "Skill")
+    val (first, last) = readln().split(" ")
+    displayNameTagWithStars(first, last)
 }
  
